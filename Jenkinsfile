@@ -11,15 +11,15 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t rentcar .'
+                sh '/usr/local/bin/docker build -t rentcar .'
             }
         }
 
         stage('Docker Run') {
             steps {
-                sh 'docker stop rentcar-container || true'
-                sh 'docker rm rentcar-container || true'
-                sh 'docker run -d -p 8082:8080 --name rentcar-container rentcar'
+                sh '/usr/local/bin/docker stop rentcar-container || true'
+                sh '/usr/local/bin/docker rm rentcar-container || true'
+                sh '/usr/local/bin/docker run -d -p 8082:8080 --name rentcar-container rentcar'
             }
         }
     }
