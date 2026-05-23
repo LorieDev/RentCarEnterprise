@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:8080/cars";
+const apiUrl = "/cars";
 
 window.onload = function() {
     loadCars();
