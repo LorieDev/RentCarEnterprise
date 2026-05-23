@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RentCarEnterprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Welcome to RentCarEnterprise</h1>
+    <p>Manage rental cars and view the cars saved in the system.</p>
+
+    <h2>Enter car details</h2>
+
+    <form id="carForm">
+        <input type="hidden" id="carId">
+
+        <input type="text" id="brand" placeholder="Brand" required>
+        <input type="text" id="model" placeholder="Model" required>
+        <input type="number" id="price" placeholder="Price" required>
+        <input type="number" id="year" placeholder="Year" required> <!-- NEW -->
+        <input type="text" id="color" placeholder="Color" required> <!-- NEW -->
+
+        <button type="submit" id="submitButton">Save Car</button>
+        <button type="button" id="cancelButton" onclick="cancelEdit()">Cancel</button>
+    </form>
+
+    <h2>Car List</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Year</th>     <!-- NEW -->
+            <th>Color</th>    <!-- NEW -->
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody id="carTableBody"></tbody>
+    </table>
+
+</div>
+
+<!-- 🔥 FOOTER -->
+<footer>
+    <p>© 2026 Lorvezline Donassaint</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
